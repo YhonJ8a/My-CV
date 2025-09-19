@@ -10,7 +10,7 @@ export default function Layout({ children }: ChildContainerProps) {
         <React.Fragment>
             <div className='layout-wrapper'>
                 <AppTopbar />
-                <div className="layout-sidebar">
+                <div className="layout-sidebar" style={{display:'none'}}>
                     <AppSidebar />
                 </div>
                 <div className="layout-main-container">

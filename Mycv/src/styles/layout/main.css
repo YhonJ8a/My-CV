@@ -34,3 +34,11 @@
     flex: 1 1 auto;
     background: #f5d832;
 }
+
+
+.layout-topbar-perfil{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: solid 2px #9af532;
+}
