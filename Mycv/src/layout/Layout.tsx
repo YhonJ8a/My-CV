@@ -4,14 +4,14 @@ import AppFooter from './AppFooter';
 import AppSidebar from './AppSidebar';
 import AppTopbar from './AppTopbar';
 import '../styles/layout/main.css';
-import imsg from '../assets/ufo-svgrepo-com.png';
+import imsg from '../assets/cursor/ufo-svgrepo-press.png';
 
 export default function Layout({ children }: ChildContainerProps) {
     const [visibleMenu, setVisibleMenu] = React.useState(false);
 
     return (
         <React.Fragment>
-            <div className='layout-wrapper'>
+            <div className='layout-wrapper cursor'>
                 <AppTopbar setVisibleMenu={setVisibleMenu} />
                 <div className="layout-sidebar" style={{ display: visibleMenu ? 'block' : 'none' }}>
                     <AppSidebar />

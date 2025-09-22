@@ -175,3 +175,8 @@
   --primary-800:#137483;
   --primary-900:#0e545f;
 }
+
+::selection{
+  background: var(--primary-color);
+  color: var(--blue-50);
+}

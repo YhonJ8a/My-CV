@@ -56,11 +56,9 @@
   position: relative;
   color: var(--text-color-secondary-solid);
   top: -1.3rem;
-  background: radial-gradient(
-    var(--surface-e) 45%,
-    transparent 80%,
-    transparent 100%
-  );
+  background: radial-gradient(var(--surface-e) 45%,
+      transparent 80%,
+      transparent 100%);
   padding: 0 10px;
   text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff,
     0 0 40px var(--primary-color), 0 0 70px var(--primary-color),
@@ -72,13 +70,13 @@
   display: flex;
   align-items: center;
 }
+
 .layout-topbar-button {
   background: none;
   border: none;
-}
-
-.layout-topbar-button:hover {
-  cursor: url("../../assets/ufo-svgrepo-com.svg"), auto;
+  width: 3rem;
+  height: 2rem;
+  filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 80px var(--primary-color)); 
 }
 
 .layout-topbar-logo {
@@ -97,6 +95,7 @@
   transform: scale(var(--primary-color, 1));
   border-radius: 22px;
 }
+
 .pi-bars::after,
 .pi-bars::before {
   content: "";
@@ -105,6 +104,7 @@
   position: absolute;
   left: 4px;
 }
+
 .pi-bars::after {
   width: 6px;
   height: 6px;
@@ -113,9 +113,52 @@
   transform: rotate(45deg);
   bottom: 6px;
 }
+
 .pi-bars::before {
   width: 10px;
   height: 2px;
   bottom: 8px;
   background: var(--primary-color);
+}
+
+
+.icon-menu {
+  width: 30px;
+  height: 3px;
+  background: white;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.icon-menu::before,
+.icon-menu::after {
+  content: "";
+  position: absolute;
+  left: -15px;
+  width: 30px;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.icon-menu::before {
+  top: -8px;
+}
+
+.icon-menu::after {
+  top: 8px;
+}
+
+.icon-menu, .active {
+  background: transparent;
+}
+
+.icon-menu, .active::before {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.icon-menu, .active::after {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
