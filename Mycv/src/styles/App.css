@@ -11,9 +11,11 @@
   --surface-e: #1f2937;
   --surface-f: #1f2937;
   --text-color: rgba(255, 255, 255, 0.87);
+  --text-color-solid: #ffffff;
   --text-color-secondary: rgba(255, 255, 255, 0.6);
-  --primary-color: #22d3ee;
-  --primary-color-text: #030712;
+  --text-color-secondary-solid: #cacaca;
+  --primary-color: #36f7f7;
+  --primary-color-text: #1aa3a3;
   --surface-0: #111827;
   --surface-50: #1f2937;
   --surface-100: #374151;

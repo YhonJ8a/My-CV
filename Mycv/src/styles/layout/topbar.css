@@ -1,13 +1,121 @@
 .layout-topbar {
-    height: 5rem;
-    z-index: 997;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 2rem;
-    background-color: var(--surface-card);
-    transition: left 2s;
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 3px 5px #00000005, 0px 0px 2px #0000000d, 0px 1px 4px #00000014;
+  height: 5rem;
+  width: 100%;
+  padding: 2rem;
+  background-color: var(--surface-card);
+  display: flex;
+}
+
+.layout-topbar-perfil {
+  width: 7rem;
+  height: 7rem;
+  background: radial-gradient(var(--primary-color), transparent 100%);
+  border-radius: 50%;
+  border: solid 1px #ffffff;
+}
+
+.layout-topbar-perfil:hover {
+  border: solid 1px var(--primary-color);
+  transition: border 0.5s;
+  /* filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 40px var(--primary-color)); */
+  box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color);
+}
+
+.layout-topbar-figure {
+  margin: 0;
+  height: 7rem;
+}
+
+.layout-topbar-figure a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.layout-topbar-titulo {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.layout-topbar-titulo h1 {
+  font-size: 2.6rem;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.layout-topbar-titulo p {
+  font-size: 1.2rem;
+  color: var(--text-color-secondary);
+  margin: 0;
+}
+
+.layout-topbar-figcaption {
+  font-size: 1rem;
+  position: relative;
+  color: var(--text-color-secondary-solid);
+  top: -1.3rem;
+  background: radial-gradient(
+    var(--surface-e) 45%,
+    transparent 80%,
+    transparent 100%
+  );
+  padding: 0 10px;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #007bff,
+    0 0 40px var(--primary-color), 0 0 70px var(--primary-color),
+    0 0 80px var(--primary-color), 0 0 100px var(--primary-color);
+}
+
+.layout-topbar-menu {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.layout-topbar-button {
+  background: none;
+  border: none;
+}
+
+.layout-topbar-button:hover {
+  cursor: url("../../assets/ufo-svgrepo-com.svg"), auto;
+}
+
+.layout-topbar-logo {
+  flex: 4;
+  display: flex;
+  align-items: center;
+}
+
+.pi-bars {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--primary-color);
+  transform: scale(var(--primary-color, 1));
+  border-radius: 22px;
+}
+.pi-bars::after,
+.pi-bars::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  left: 4px;
+}
+.pi-bars::after {
+  width: 6px;
+  height: 6px;
+  border-bottom: 2px solid var(--primary-color);
+  border-left: 2px solid var(--primary-color);
+  transform: rotate(45deg);
+  bottom: 6px;
+}
+.pi-bars::before {
+  width: 10px;
+  height: 2px;
+  bottom: 8px;
+  background: var(--primary-color);
 }

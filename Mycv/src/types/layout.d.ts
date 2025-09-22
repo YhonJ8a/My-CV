@@ -8,4 +8,8 @@ type ChildContainerProps = {
     children: ReactNode;
 };
 
-export type { ChildContainerProps };
+type propsTopbar = {
+    setVisibleMenu: (prop: boolean | ((boolean) => boolean)) => void;
+};
+
+export type { ChildContainerProps, propsTopbar };
