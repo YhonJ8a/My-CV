@@ -12,4 +12,25 @@ type propsTopbar = {
     setVisibleMenu: (prop: boolean | ((boolean) => boolean)) => void;
 };
 
-export type { ChildContainerProps, propsTopbar };
+type Star = {
+    x: number;
+    y: number;
+    radius: number;
+    speed: number;
+    direction: number;
+};
+
+export interface Language {
+    id: string;
+    name: string;
+    label: string;
+    src?: string
+};
+
+export interface Experience {
+    time: string;
+    languages: Language[];
+
+}
+
+export type { ChildContainerProps, propsTopbar, Star };

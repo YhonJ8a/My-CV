@@ -1,0 +1,137 @@
+.logo-js {
+    width: 80px;
+    height: 80px;
+    background: #f7df1e;
+    color: #000;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.logo-js:hover {
+    transform: rotate(-5deg) scale(1.1);
+}
+
+.logo-ts {
+    width: 80px;
+    height: 80px;
+    background: #3178c6;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.logo-ts:hover {
+    transform: scale(1.2) rotate(3deg);
+}
+
+.logo-c {
+    width: 120px;
+    height: 120px;
+    background: #283593;
+    /* Azul base */
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    clip-path: polygon(25% 6.7%,
+            /* esquina superior izq */
+            75% 6.7%,
+            /* esquina superior der */
+            100% 50%,
+            /* punto medio derecha */
+            75% 93.3%,
+            /* esquina inferior der */
+            25% 93.3%,
+            /* esquina inferior izq */
+            0% 50%
+            /* punto medio izquierda */
+        );
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+
+/* Efecto hover */
+.logo-c:hover {
+    transform: rotate(10deg) scale(1.1);
+    box-shadow: 0 0 20px rgba(40, 53, 147, 0.7);
+}
+
+
+.logo-cs {
+    width: 90px;
+    height: 90px;
+    background: #68217a;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    transition: box-shadow 0.3s;
+}
+
+.logo-cs:hover {
+    box-shadow: 0 0 20px #b972d5;
+}
+
+.logo-java {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    background: white;
+    border: 3px solid #e76f00;
+    border-radius: 8px;
+}
+
+/* Vapor */
+.logo-java::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 35px;
+    width: 10px;
+    height: 30px;
+    border-left: 3px solid #e76f00;
+    border-radius: 50%;
+    animation: steam 1.5s infinite ease-in-out;
+}
+
+/* Taza */
+.logo-java::after {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 40px;
+    height: 20px;
+    background: #e76f00;
+    border-radius: 0 0 10px 10px;
+}
+
+@keyframes steam {
+    0% {
+        transform: translateY(0) scaleX(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-15px) scaleX(0.5);
+        opacity: 0;
+    }
+}

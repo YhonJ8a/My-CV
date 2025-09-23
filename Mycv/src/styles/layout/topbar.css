@@ -1,9 +1,20 @@
 .layout-topbar {
-  height: 5rem;
-  width: 100%;
-  padding: 2rem;
-  background-color: var(--surface-card);
+  position: fixed;
+  height: 6rem;
+  width: 94vw;
+  padding: 1rem;
+  margin: 0 1rem;
+  backdrop-filter: blur(5px);
+  background-color: var(--surface-card-50);
   display: flex;
+  border-radius: 1rem;
+  box-shadow: 0 0 1px var(--primary-color), 0 0 5px var(--primary-color);
+}
+
+.layout-topbar-languages {
+  flex: 1;
+  display: flex;
+  align-items: center;
 }
 
 .layout-topbar-perfil {
@@ -17,7 +28,6 @@
 .layout-topbar-perfil:hover {
   border: solid 1px var(--primary-color);
   transition: border 0.5s;
-  /* filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 40px var(--primary-color)); */
   box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color);
 }
 
@@ -76,7 +86,7 @@
   border: none;
   width: 3rem;
   height: 2rem;
-  filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 80px var(--primary-color)); 
+  filter: drop-shadow(0 0 5px var(--primary-color)) drop-shadow(0 0 80px var(--primary-color));
 }
 
 .layout-topbar-logo {
@@ -161,4 +171,60 @@
 
 .icon-menu, .active::after {
   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.img-logo-languages {
+  height: 3rem;
+  width: 3rem;
+}
+
+
+
+.carrusel-container {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: white;
+}
+
+.carrusel-container h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.carrusel {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color);
+}
+
+.carrusel-inner {
+  display: flex;
+  flex-direction: column;
+  animation: slide 10s infinite linear;
+  background: var(--primary-color);
+}
+
+.carrusel-inner img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+  background: transparent;
+  border-radius: 12px;
+  filter: drop-shadow(0 0 3px var(--surface-card)) drop-shadow(0 0 6px var(--surface-card)); 
+}
+
+@keyframes slide {
+  0% {transform: translateY(0);}
+  20% {transform: translateY(0);}
+  25% {transform: translateY(-3rem);}
+  40% {transform: translateY(-3rem);}
+  45% {transform: translateY(-6rem);}
+  60% {transform: translateY(-6rem);}
+  65% {transform: translateY(-9rem);}
+  80% {transform: translateY(-9rem);}
+  85% {transform: translateY(-12rem);}
+  100% {transform: translateY(-12rem);}
 }

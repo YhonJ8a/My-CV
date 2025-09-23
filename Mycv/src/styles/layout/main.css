@@ -1,7 +1,7 @@
 .layout-wrapper {
   min-height: 100vh;
-  background: #000000;
-  cursor: url("../../assets/cursor/ufo-svgrepo-pointer.png") 10 10, auto;
+  background:transparent;
+  gap: 2rem;
 }
 
 .cursor {
@@ -12,7 +12,10 @@
   cursor: url("../../assets/cursor/ufo-svgrepo-press.png") 10 10, auto;
 }
 
-
+.layout-topbar-content{
+  width: 100vw;
+  height:12rem;
+}
 
 .layout-sidebar {
   position: fixed;
@@ -34,14 +37,14 @@
 .layout-main-container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 80vh;
   justify-content: space-between;
   padding: 3rem 2rem 2rem 4rem;
   transition: margin-left 2s;
-  background: #f532d5;
+  background: transparent;
 }
 
 .layout-main {
   flex: 1 1 auto;
-  background: #f5d832;
+  background: #f5d83241;
 }

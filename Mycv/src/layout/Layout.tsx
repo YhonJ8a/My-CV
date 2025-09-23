@@ -4,7 +4,6 @@ import AppFooter from './AppFooter';
 import AppSidebar from './AppSidebar';
 import AppTopbar from './AppTopbar';
 import '../styles/layout/main.css';
-import imsg from '../assets/cursor/ufo-svgrepo-press.png';
 
 export default function Layout({ children }: ChildContainerProps) {
     const [visibleMenu, setVisibleMenu] = React.useState(false);
@@ -12,13 +11,14 @@ export default function Layout({ children }: ChildContainerProps) {
     return (
         <React.Fragment>
             <div className='layout-wrapper cursor'>
-                <AppTopbar setVisibleMenu={setVisibleMenu} />
+                <div className='layout-topbar-content'>
+                    <AppTopbar setVisibleMenu={setVisibleMenu} />
+                </div>
                 <div className="layout-sidebar" style={{ display: visibleMenu ? 'block' : 'none' }}>
                     <AppSidebar />
                 </div>
                 <div className="layout-main-container">
                     <div className="layout-main">
-                        <img src={imsg} alt="pruebas" />
                         {children}</div>
                     <AppFooter />
                 </div>

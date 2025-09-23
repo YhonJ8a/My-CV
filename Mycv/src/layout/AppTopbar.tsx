@@ -1,7 +1,9 @@
 import '../styles/layout/topbar.css';
+import '../styles/icons.css';
 import React from 'react';
 import perfil from '../assets/8b0ce28b-ef55-4764-b1ec-6d51ea0ca.png';
 import type { propsTopbar } from '../types/layout';
+import { EXPERIENCE } from '../assets/Data/data';
 
 export default function AppTopbar(props: propsTopbar) {
     const { setVisibleMenu } = props;
@@ -32,6 +34,14 @@ export default function AppTopbar(props: propsTopbar) {
                 <div className='layout-topbar-titulo'>
                     <h1>Yhon J. Ochoa Mayorga</h1>
                     <p>Desarrollador Full Stack</p>
+                </div>
+            </div>
+            <div className='layout-topbar-languages'>
+                <h2>Lenguajes</h2>
+                <div className="carrusel">
+                    <div className="carrusel-inner">
+                        {EXPERIENCE.languages.map(a => <img  src={a.src} alt={a.label} />)}
+                    </div>
                 </div>
             </div>
         </div>
