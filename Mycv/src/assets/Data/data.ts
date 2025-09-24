@@ -23,6 +23,18 @@ const EXPERIENCE: Experience = {
             id: 'py', name: "Python", label: "",
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
         },
+        {
+            id: 'js', name: "JavaScrit", label: "",
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+        },
+        {
+            id: 'kt', name: "Kotlin", label: "",
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+        },
+        {
+            id: 'rb', name: "Ruby", label: "",
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/ruby/ruby-original.svg"
+        }
     ]
 };
 

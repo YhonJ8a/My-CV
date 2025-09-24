@@ -1,7 +1,7 @@
 .layout-wrapper {
-  min-height: 100vh;
+  min-height: 100dvh;
   background:transparent;
-  gap: 2rem;
+  padding: 5px;
 }
 
 .cursor {
@@ -13,19 +13,19 @@
 }
 
 .layout-topbar-content{
-  width: 100vw;
-  height:12rem;
+  width: 100dvw;
+  height:10rem;
 }
 
 .layout-sidebar {
   position: fixed;
   width: 200px;
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 15rem);
   z-index: 999;
   overflow-y: auto;
   user-select: none;
-  top: 8rem;
-  left: 2rem;
+  top:10rem;
+  left: 1rem;
   transition: transform 2s, left 2s;
   background-color: var(--surface-overlay);
   border-radius: 12px;
@@ -37,14 +37,14 @@
 .layout-main-container {
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 180vh;
   justify-content: space-between;
-  padding: 3rem 2rem 2rem 4rem;
+  padding: 1rem 1rem 1rem 2rem;
   transition: margin-left 2s;
   background: transparent;
 }
 
 .layout-main {
   flex: 1 1 auto;
-  background: #f5d83241;
+  background: #f5d8327a;
 }

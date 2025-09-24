@@ -37,7 +37,7 @@ export default function AppTopbar(props: propsTopbar) {
                 </div>
             </div>
             <div className='layout-topbar-languages'>
-                <h2>Lenguajes</h2>
+                <h2>Lenguajes:</h2>
                 <div className="carrusel">
                     <div className="carrusel-inner">
                         {EXPERIENCE.languages.map(a => <img  src={a.src} alt={a.label} />)}

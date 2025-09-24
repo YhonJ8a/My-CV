@@ -181,3 +181,8 @@
   background: var(--primary-color);
   color: var(--blue-50);
 }
+
+body{
+  margin: 0%;
+  padding: 0%;
+}
