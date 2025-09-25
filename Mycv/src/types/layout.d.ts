@@ -24,12 +24,30 @@ export interface Language {
     id: string;
     name: string;
     label: string;
-    src?: string
+    src?: string;
 };
+
+export interface Companies {
+    name: string;
+    time: number;
+    start: string;
+    end: string;
+    description: string[];
+    job_title: string;
+}
+
+export interface Technologies {
+    id: string;
+    name: string;
+    label: string;
+    src?: string;
+}
 
 export interface Experience {
     time: string;
     languages: Language[];
+    companies: Companies[];
+    technologies: Technologies[];
 
 }
 
