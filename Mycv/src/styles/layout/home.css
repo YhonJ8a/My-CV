@@ -87,7 +87,10 @@
   color: #d4d4d4;
 }
 
-/* JSON Colors */
+.char {
+  color: #d4d4d4;
+}
+
 .key {
   color: #9cdcfe;
 }

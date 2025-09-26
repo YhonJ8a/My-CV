@@ -74,6 +74,7 @@ export default function Sky() {
     return (<div className='background-sky'>
         <canvas ref={canvasRef}></canvas>
         <div className="sol"></div>
+        <div className='planet'></div>
     </div>
     )
 }

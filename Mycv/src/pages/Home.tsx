@@ -1,6 +1,31 @@
+import React from 'react';
 import '../styles/layout/home.css';
+import type { propsLinearCode } from '../types/Componets';
+import { DEVELOPER } from '../assets/Data/data';
+
+
+let globalCounterRow = 0;
+
+const LineEditorCode = (props: propsLinearCode) => {
+    const { dataKey, value } = props;
+    const instanceRow = React.useRef(++globalCounterRow);
+    const classNameInput = !dataKey && typeof value === 'string' ? 'char' : typeof value;
+
+    return (
+        <div className="code">
+            <span>{`${instanceRow.current} ${dataKey ? '\t' : ''}`}</span>
+            <span className="key">{dataKey}</span>{dataKey && ': '}
+            <span className={classNameInput}>{`${value} `}</span>
+            <span>{dataKey ? ',' : ''}</span>
+        </div>
+    )
+};
 
 export default function Home() {
+
+    const jsonString: string = JSON.stringify(DEVELOPER, null, 2);
+    console.log(jsonString);
+
     return (
         <div className='body-home'>
             <div className="vscode-window">
@@ -20,15 +45,16 @@ export default function Home() {
                     </div>
 
                     <div className="editor">
-                        <div className="line-numbers">
-                            1<br />2<br />3<br />4<br />5<br />6<br />7<br />
-                        </div>
                         <div className="code">
-                            <span className="key">{'{'}"name"</span>: <span className="string">"Lana"</span>,<br />
-                            <span className="key"> "age"</span>: <span className="number">25</span>,<br />
-                            <span className="key"> "active"</span>: <span className="boolean">true</span>,<br />
+                            {jsonString}
+                            <LineEditorCode value={"{"} />
+                            <LineEditorCode dataKey={'name'} value={"Lana"} />
+                            <LineEditorCode dataKey={'age'} value={25} />
+                            <LineEditorCode dataKey={'active'} value={true} />
+                            <LineEditorCode value={"}"} />
                             <span className="key"> "skills"</span>: [<span className="string">"JavaScript"</span>, <span className="string">"React"</span>],<br />
-                            <span className="key"> "address"</span>: <span className="null">null</span><br />{'}'}
+                            <span className="key"> "address"</span>: <span className="null">null</span><br />
+                            {'}'}
                         </div>
                     </div>
                 </div>

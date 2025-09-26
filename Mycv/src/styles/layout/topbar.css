@@ -225,19 +225,21 @@
 
 @keyframes slide {
   0% {transform: translate(0, 4);}
-  2% {transform: translate(0, 0);}
-  12% {transform: translate(0, 0);}
-  15% {transform: translate(-5rem, 0);}
-  27% {transform: translate(-5rem, 0);}
-  30% {transform: translate(-5rem, -5rem);}
-  42% {transform: translate(-5rem, -5rem);}
-  45% {transform: translate(0rem, -5rem);}
-  57% {transform: translate(0rem, -5rem);}
-  60% {transform: translate(0rem, -10rem);}
-  72% {transform: translate(0rem, -10rem);}
-  75% {transform: translate(-5rem, -10rem);}
-  87% {transform: translate(-5rem, -10rem);}
-  90% {transform: translate(-5rem, -15rem);}
-  98% {transform: translate(-5rem, -15rem);}
-  100% {transform: translate(-5rem, -19rem);}
+  4% {transform: translate(0, 0);}
+  14% {transform: translate(0, 0);}
+  16% {transform: translate(-5rem, 0);}
+  26% {transform: translate(-5rem, 0);}
+  28% {transform: translate(-5rem, -5rem);}
+  38% {transform: translate(-5rem, -5rem);}
+  40% {transform: translate(0rem, -5rem);}
+  50% {transform: translate(0rem, -5rem);}
+  52% {transform: translate(0rem, -10rem);}
+  62% {transform: translate(0rem, -10rem);}
+  64% {transform: translate(-5rem, -10rem);}
+  74% {transform: translate(-5rem, -10rem);}
+  76% {transform: translate(-5rem, -15rem);}
+  86% {transform: translate(-5rem, -15rem);}
+  88% {transform: translate(0rem, -15rem);}
+  98% {transform: translate(0rem, -15rem);}
+  100% {transform: translate(-0rem, -19rem);}
 }
