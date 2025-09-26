@@ -13,10 +13,10 @@ const LineEditorCode = (props: propsLinearCode) => {
 
     return (
         <div className="code">
-            <span>{`${instanceRow.current} ${dataKey ? '\t' : ''}`}</span>
-            <span className="key">{dataKey}</span>{dataKey && ': '}
-            <span className={classNameInput}>{`${value} `}</span>
-            <span>{dataKey ? ',' : ''}</span>
+            <span>{`${instanceRow.current} ${value ? '\t' : ''}`}</span>
+            <span className="key">{dataKey}</span>{value && ': '}
+            <span className={classNameInput}>{`${value || ''} `}</span>
+            <span>{value ? ',' : ''}</span>
         </div>
     )
 };
@@ -29,14 +29,6 @@ export default function Home() {
     return (
         <div className='body-home'>
             <div className="vscode-window">
-                <div className="sidebar">
-                    <div className="icon"></div>
-                    <div className="icon"></div>
-                    <div className="icon"></div>
-                    <div className="icon"></div>
-                    <div className="icon"></div>
-                </div>
-
                 <div className="main">
                     <div className="tabs">
                         <div className="tab active">data.json</div>
@@ -46,15 +38,13 @@ export default function Home() {
 
                     <div className="editor">
                         <div className="code">
-                            {jsonString}
-                            <LineEditorCode value={"{"} />
-                            <LineEditorCode dataKey={'name'} value={"Lana"} />
-                            <LineEditorCode dataKey={'age'} value={25} />
-                            <LineEditorCode dataKey={'active'} value={true} />
-                            <LineEditorCode value={"}"} />
-                            <span className="key"> "skills"</span>: [<span className="string">"JavaScript"</span>, <span className="string">"React"</span>],<br />
-                            <span className="key"> "address"</span>: <span className="null">null</span><br />
-                            {'}'}
+                            {
+                                jsonString.split('\n')
+                                    .map(a => {
+                                        const KeyValue = a.split(':');
+                                        return <LineEditorCode dataKey={KeyValue[0]} value={KeyValue[1]} />
+                                    })
+                            }
                         </div>
                     </div>
                 </div>

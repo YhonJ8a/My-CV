@@ -112,10 +112,10 @@ const DEVELOPER = {
     first_name: "Yhon Jairo",
     last_name: "Ochoa Mayorga",
     email: "jhjairo816@gmail.com",
-    telephone: [3203823364],
+    telephone: 3203823364,
     age: 25,
-    git: "@YhonJ8a"
-
+    git: "@YhonJ8a",
+    active: true
 };
 
 export { EXPERIENCE, DEVELOPER };
