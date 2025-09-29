@@ -1,6 +1,6 @@
 .layout-wrapper {
   min-height: 100dvh;
-  background:transparent;
+  background: transparent;
   padding: 5px;
 }
 
@@ -12,9 +12,9 @@
   cursor: url("../../assets/cursor/ufo-svgrepo-press.png") 10 10, auto;
 }
 
-.layout-topbar-content{
+.layout-topbar-content {
   width: 100dvw;
-  height:10rem;
+  height: 10rem;
 }
 
 .layout-sidebar {
@@ -24,13 +24,28 @@
   z-index: 999;
   overflow-y: auto;
   user-select: none;
-  top:10rem;
-  left: 1rem;
-  transition: transform 2s, left 2s;
+  top: 10rem;
+  left: -16rem;
+  transition: transform 1s, left 1s;
   background-color: var(--surface-overlay);
   border-radius: 12px;
   padding: 0.5rem 1.5rem;
-  background: var(--surface-card);
+  box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color);
+}
+
+.layout-sidebar-active {
+  position: fixed;
+  width: 200px;
+  height: calc(100vh - 15rem);
+  z-index: 999;
+  overflow-y: auto;
+  user-select: none;
+  top: 10rem;
+  left: 1rem;
+  transition: transform 1s, left 1s;
+  background-color: var(--surface-overlay);
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
   box-shadow: 0 0 5px var(--primary-color), 0 0 25px var(--primary-color);
 }
 
@@ -46,5 +61,5 @@
 
 .layout-main {
   flex: 1 1 auto;
-  background: #f5d8327a;
+  background: transparent;
 }

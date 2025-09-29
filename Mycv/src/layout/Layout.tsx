@@ -16,7 +16,7 @@ export default function Layout({ children }: ChildContainerProps) {
                 <div className='layout-topbar-content'>
                     <AppTopbar setVisibleMenu={setVisibleMenu} />
                 </div>
-                <div className="layout-sidebar" style={{ display: visibleMenu ? 'block' : 'none' }}>
+                <div className={`layout-sidebar${visibleMenu ? '-active' : ''}`} >
                     <AppSidebar />
                 </div>
                 <div className="layout-main-container">

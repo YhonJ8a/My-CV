@@ -62,12 +62,12 @@ const EXPERIENCE: Experience = {
             src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
         },
         {
-            id: 'boots', name: "Bootstrap", label: "",
-            src: ""
+            id: 'spring', name: "Spring", label: "",
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
         },
         {
-            id: 'boots', name: "Bootstrap", label: "",
-            src: ""
+            id: 'nodejs', name: "NodeJS", label: "",
+            src: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
         },
         {
             id: 'boots', name: "Bootstrap", label: "",
@@ -118,4 +118,6 @@ const DEVELOPER = {
     active: true
 };
 
-export { EXPERIENCE, DEVELOPER };
+const REGEXP_JSON:RegExp = /"([^"]+)":\s*(.*?)/g;
+
+export { EXPERIENCE, DEVELOPER, REGEXP_JSON };

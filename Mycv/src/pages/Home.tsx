@@ -7,48 +7,66 @@ import { DEVELOPER } from '../assets/Data/data';
 let globalCounterRow = 0;
 
 const LineEditorCode = (props: propsLinearCode) => {
-    const { dataKey, value } = props;
     const instanceRow = React.useRef(++globalCounterRow);
-    const classNameInput = !dataKey && typeof value === 'string' ? 'char' : typeof value;
+    const value = props.value.replace(',', '').trim();
+    const regex = /"([^"]+)":\s*(.*?)/g;
+    const [dataKey, dataValue] = regex.test(value) ? Object.entries(JSON.parse(`{${value}}`))[0] : [value, ''];
+    const classNameInput = !dataValue && typeof dataValue === 'string' ? 'char' : typeof dataValue;
 
     return (
         <div className="code">
-            <span>{`${instanceRow.current} ${value ? '\t' : ''}`}</span>
-            <span className="key">{dataKey}</span>{value && ': '}
-            <span className={classNameInput}>{`${value || ''} `}</span>
-            <span>{value ? ',' : ''}</span>
+            <span>{`${instanceRow.current} ${dataValue ? '\t' : ''}`}</span>
+            <span className={classNameInput == 'char' ? 'char' : 'key'}>{'' + dataKey}</span>{dataValue ? ': ' : ''}
+            <span className={classNameInput}>{`${dataValue || ''} `}</span>
+            <span>{dataValue ? ',' : ''}</span>
         </div>
     )
 };
 
-export default function Home() {
+const TabsContent = (props :{jsonString:string}) => {
+    const { jsonString } = props;
 
-    const jsonString: string = JSON.stringify(DEVELOPER, null, 2);
-    console.log(jsonString);
+    const DATA = JSON.parse(jsonString);
+    console.log(DATA.array.forEach(element => {
+        console.log(element);
+    }));
+
+    return (
+        <div className="main">
+            <div className="tabs">
+                <div className="tab active">data.json</div>
+                <div className="tab">app.js</div>
+                <div className="tab">style.css</div>
+            </div>
+
+            <div className="editor">
+            </div>
+        </div>
+    );
+};
+
+export default function Home() {
+    const developer: string = JSON.stringify(DEVELOPER, null, 2);
+    const DATA = `{"Developer": ${developer}, "Developer1": ${developer},"Developer2": ${developer}}`;
 
     return (
         <div className='body-home'>
             <div className="vscode-window">
                 <div className="main">
                     <div className="tabs">
-                        <div className="tab active">data.json</div>
+                        <div className="tab active">Developer.json</div>
                         <div className="tab">app.js</div>
                         <div className="tab">style.css</div>
                     </div>
 
                     <div className="editor">
                         <div className="code">
-                            {
-                                jsonString.split('\n')
-                                    .map(a => {
-                                        const KeyValue = a.split(':');
-                                        return <LineEditorCode dataKey={KeyValue[0]} value={KeyValue[1]} />
-                                    })
-                            }
+                            {developer.split('\n').map(a => <LineEditorCode value={a} />)}
                         </div>
                     </div>
                 </div>
             </div>
+            <TabsContent jsonString={DATA} />
         </div>
     );
 }
